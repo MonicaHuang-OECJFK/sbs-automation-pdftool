@@ -4,21 +4,22 @@ from excel.excel_writer_test import update_excel_rates_test
 import tempfile
 
 st.title("Non TP COSCO SBS Rate Updater")
+st.markdown("#### 🔧 What this tool does")
 st.markdown("""
-#### 🔧 What this tool does
 - ✅ Copies current rates (W, X, Y) into old rate columns (AD, AE, AF)
 - 🚢 Updates Ocean Freight rates (H, I, J)
 - ⚓ Updates Wharfage rates (Q, R, S)
-
----
-
-#### ⚠️ Important Notes
-- ETS is **not updated** (exchange rate dependent)
-- Please **update the valid date manually**
-- Do **NOT** add or insert new columns (this will break the template)
 """)
 
-st.markdown("<br>", unsafe_allow_html=True)
+st.markdown("#### ⚠️ Important Notes")
+st.markdown("""
+- ETS is **not updated** (exchange rate dependent)
+- Please update the **valid date manually**
+- ❗ Do **NOT** add or insert new columns (this will break the template)
+""")
+
+# 👉 線放這裡（你要的位置）
+st.markdown("---")
 
 pdf_file = st.file_uploader("Upload PDF", type="pdf")
 excel_file = st.file_uploader("Upload Excel", type="xlsx")
