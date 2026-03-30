@@ -15,11 +15,11 @@ st.markdown("#### ⚠️ Important Notes")
 st.markdown("""
 - ETS is **not updated** (exchange rate dependent)
 - Please update the **valid date manually**
-- ❗ Do **NOT** add or insert new columns (this will break the template)
+- Do **NOT** add or insert new columns (this will break the template)
 """)
 
 # 👉 線放這裡（你要的位置）
-st.markdown("---")
+st.markdown("<br>", unsafe_allow_html=True)
 
 pdf_file = st.file_uploader("Upload PDF", type="pdf")
 excel_file = st.file_uploader("Upload Excel", type="xlsx")
