@@ -11,7 +11,7 @@ st.markdown("""
 - ⚓ Updates Wharfage rates (Q, R, S)
 """)
 
-st.markdown("#### ⚠️ Important Notes")
+st.markdown("##### ⚠️ Important Notes")
 st.markdown("""
 - ETS is **not updated** (exchange rate dependent)
 - Please update the **valid date** manually
