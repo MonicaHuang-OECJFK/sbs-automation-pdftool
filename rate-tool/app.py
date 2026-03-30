@@ -3,7 +3,7 @@ from parsers.cosco_parser import parse_cosco_pdf, parse_wharfage
 from excel.excel_writer_test import update_excel_rates_test
 import tempfile
 
-st.title("SBS Rate Updater")
+st.title("Non TP COSCO SBS Rate Updater")
 
 pdf_file = st.file_uploader("Upload PDF", type="pdf")
 excel_file = st.file_uploader("Upload Excel", type="xlsx")
