@@ -18,7 +18,7 @@ st.markdown("""
 - Do **NOT** add or insert new columns (this will break the template)
 """)
 
-st.markdown("<br><br>", unsafe_allow_html=True)
+st.markdown("<br>", unsafe_allow_html=True)
 
 pdf_file = st.file_uploader("Upload PDF", type="pdf")
 excel_file = st.file_uploader("Upload Excel", type="xlsx")
