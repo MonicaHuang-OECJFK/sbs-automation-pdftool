@@ -1,5 +1,5 @@
 import streamlit as st
-from parsers.cosco_parser import parse_cosco_pdf
+from parsers.cosco_parser import parse_cosco_pdf, parse_wharfage
 from excel.excel_writer_test import update_excel_rates_test
 import tempfile
 
@@ -20,9 +20,14 @@ if st.button("Run"):
             tmp_excel.write(excel_file.read())
             excel_path = tmp_excel.name
 
+        # ✅ parse
         rates = parse_cosco_pdf(pdf_path)
-        update_excel_rates_test(excel_path, rates)
+        whf_rates = parse_wharfage(pdf_path)
 
+        # ✅ update
+        update_excel_rates_test(excel_path, rates, whf_rates)
+
+        # ✅ download
         with open(excel_path, "rb") as f:
             st.download_button(
                 "Download Updated Excel",
