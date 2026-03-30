@@ -14,8 +14,8 @@ st.markdown("""
 st.markdown("#### ⚠️ Important Notes")
 st.markdown("""
 - ETS is **not updated** (exchange rate dependent)
-- Please update the **valid date manually**
-- Do **NOT** add or insert new columns (this will break the template)
+- Please update the **valid date** manually
+- Do **NOT** delete or insert columns (this will break the template)
 """)
 
 # 👉 線放這裡（你要的位置）
